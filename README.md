@@ -27,6 +27,8 @@ since generation happens through chat UIs rather than the API.
 - `results/raw_kaggle_run2_separate/` — a second, independent Kaggle (Tesla T4) sweep, kept deliberately out of the main combined dataset, used only to measure run-to-run variance on shared cloud GPUs.
 - `analysis/roofline.py` — Step A analytical predictor. `analysis/residual_model.py` — Step B regression correction + leave-one-GPU-out validation. `analysis/make_report_assets.py` — generates every figure/number below from the merged dataset.
 - `report/` — IEEE paper (`paper.tex`/`paper.pdf`), figures, and `numbers.json` (every number in this README and the paper, traceable to the dataset).
+- `deploy/kaggle/run.py` + `kernel-metadata.json`/`dataset-metadata.json` — the actual script and Kaggle kernel/dataset config used to run the harness on Kaggle's free T4 (handles Kaggle's auto-extraction of the uploaded project zip).
+- `deploy/modal/app.py` — the Modal app definition used to run the harness on Modal's L4/A10G GPUs (builds a CUDA-devel image, timeout-capped for credit safety; run from inside `deploy/modal/`).
 
 ## Quickstart
 ```
