@@ -1,0 +1,315 @@
+{
+  "correctness_matrix": {
+    "colab": {
+      "pytorch": 1.0,
+      "claude": 1.0,
+      "deepseek": 0.933,
+      "gpt": 1.0,
+      "grok": 1.0,
+      "gemini": 0.0
+    },
+    "kaggle": {
+      "pytorch": 1.0,
+      "claude": 1.0,
+      "deepseek": 1.0,
+      "gpt": 1.0,
+      "grok": 1.0,
+      "gemini": 0.0
+    },
+    "l4": {
+      "pytorch": 1.0,
+      "claude": 1.0,
+      "deepseek": 1.0,
+      "gpt": 0.933,
+      "grok": 1.0,
+      "gemini": 0.0
+    },
+    "modal_a10g": {
+      "pytorch": 1.0,
+      "claude": 1.0,
+      "deepseek": 1.0,
+      "gpt": 0.933,
+      "grok": 1.0,
+      "gemini": 0.0
+    },
+    "rtx3050_laptop": {
+      "pytorch": 1.0,
+      "claude": 1.0,
+      "deepseek": 1.0,
+      "gpt": 0.933,
+      "grok": 1.0,
+      "gemini": 0.0
+    }
+  },
+  "power_efficiency_gflops_per_watt": {
+    "pytorch": {
+      "matmul": 311.525,
+      "conv2d": 212.951,
+      "attention": 123.902
+    },
+    "claude": {
+      "matmul": 32.627,
+      "conv2d": 12.028,
+      "attention": 3.985
+    },
+    "deepseek": {
+      "matmul": 13.777,
+      "conv2d": 8.106,
+      "attention": 2.791
+    },
+    "gpt": {
+      "matmul": 12.872,
+      "conv2d": 9.244,
+      "attention": 2.472
+    },
+    "grok": {
+      "matmul": 13.822,
+      "conv2d": 8.595,
+      "attention": 2.562
+    }
+  },
+  "logo_cv_linear": [
+    {
+      "held_out_gpu": "Tesla T4",
+      "n_test_rows": 149,
+      "roofline_only_mae_ms": 14.764,
+      "hybrid_mae_ms": 12.228,
+      "improvement_pct": 17.178
+    },
+    {
+      "held_out_gpu": "NVIDIA L4",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 4.893,
+      "hybrid_mae_ms": 11.822,
+      "improvement_pct": -141.604
+    },
+    {
+      "held_out_gpu": "NVIDIA A10G",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 3.409,
+      "hybrid_mae_ms": 12.047,
+      "improvement_pct": -253.371
+    },
+    {
+      "held_out_gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 11.682,
+      "hybrid_mae_ms": 10.748,
+      "improvement_pct": 8.001
+    }
+  ],
+  "logo_cv_rf": [
+    {
+      "held_out_gpu": "Tesla T4",
+      "n_test_rows": 149,
+      "roofline_only_mae_ms": 14.764,
+      "hybrid_mae_ms": 9.25,
+      "improvement_pct": 37.344
+    },
+    {
+      "held_out_gpu": "NVIDIA L4",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 4.893,
+      "hybrid_mae_ms": 4.534,
+      "improvement_pct": 7.344
+    },
+    {
+      "held_out_gpu": "NVIDIA A10G",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 3.409,
+      "hybrid_mae_ms": 6.378,
+      "improvement_pct": -87.08
+    },
+    {
+      "held_out_gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "n_test_rows": 74,
+      "roofline_only_mae_ms": 11.682,
+      "hybrid_mae_ms": 5.046,
+      "improvement_pct": 56.809
+    }
+  ],
+  "thermal_sweep": {
+    "duration_s": 595.937800877,
+    "temp_start_c": 51.0,
+    "temp_end_c": 74.0,
+    "clock_start_mhz": 1927.0,
+    "clock_end_mhz": 1897.0,
+    "power_mean_w": 79.82928813559322,
+    "power_std_w": 0.07455223622674802,
+    "latency_early_ms": 129.60203064093912,
+    "latency_late_ms": 133.03121410516678
+  },
+  "total_rows": 450,
+  "passing_rows": 371,
+  "gpus": [
+    "Tesla T4",
+    "NVIDIA L4",
+    "NVIDIA A10G",
+    "NVIDIA GeForce RTX 3050 6GB Laptop GPU"
+  ],
+  "platforms": [
+    "colab",
+    "kaggle",
+    "l4",
+    "modal_a10g",
+    "rtx3050_laptop"
+  ],
+  "overall_pass_rate_by_source": {
+    "claude": 1.0,
+    "deepseek": 0.987,
+    "gemini": 0.0,
+    "gpt": 0.96,
+    "grok": 1.0,
+    "pytorch": 1.0
+  },
+  "mean_time_ms_table": {
+    "('attention', 'NVIDIA A10G')": {
+      "claude": 14.3983,
+      "deepseek": 14.2279,
+      "gpt": 19.5442,
+      "grok": 14.6561,
+      "pytorch": 0.8988
+    },
+    "('attention', 'NVIDIA GeForce RTX 3050 6GB Laptop GPU')": {
+      "claude": 48.9923,
+      "deepseek": 43.4178,
+      "gpt": 67.7461,
+      "grok": 50.7884,
+      "pytorch": 2.955
+    },
+    "('attention', 'NVIDIA L4')": {
+      "claude": 21.5564,
+      "deepseek": 17.6894,
+      "gpt": 26.1012,
+      "grok": 19.1155,
+      "pytorch": 0.9323
+    },
+    "('attention', 'Tesla T4')": {
+      "claude": 61.7676,
+      "deepseek": 40.5695,
+      "gpt": 64.4852,
+      "grok": 65.8375,
+      "pytorch": 2.7019
+    },
+    "('conv2d', 'NVIDIA A10G')": {
+      "claude": 5.2173,
+      "deepseek": 5.0336,
+      "gpt": 4.6955,
+      "grok": 4.6851,
+      "pytorch": 0.5342
+    },
+    "('conv2d', 'NVIDIA GeForce RTX 3050 6GB Laptop GPU')": {
+      "claude": 19.1046,
+      "deepseek": 18.4398,
+      "gpt": 17.354,
+      "grok": 17.3311,
+      "pytorch": 1.9771
+    },
+    "('conv2d', 'NVIDIA L4')": {
+      "claude": 8.5604,
+      "deepseek": 8.2658,
+      "gpt": 7.8108,
+      "grok": 7.8166,
+      "pytorch": 0.8891
+    },
+    "('conv2d', 'Tesla T4')": {
+      "claude": 23.769,
+      "deepseek": 23.024,
+      "gpt": 22.4826,
+      "grok": 22.9429,
+      "pytorch": 3.8396
+    },
+    "('matmul', 'NVIDIA A10G')": {
+      "claude": 2.3912,
+      "deepseek": 2.3684,
+      "gpt": 2.3622,
+      "grok": 2.3618,
+      "pytorch": 0.3365
+    },
+    "('matmul', 'NVIDIA GeForce RTX 3050 6GB Laptop GPU')": {
+      "claude": 8.6437,
+      "deepseek": 8.6102,
+      "gpt": 8.5173,
+      "grok": 8.5245,
+      "pytorch": 1.2871
+    },
+    "('matmul', 'NVIDIA L4')": {
+      "claude": 3.4285,
+      "deepseek": 3.427,
+      "gpt": 3.3577,
+      "grok": 3.3406,
+      "pytorch": 0.4872
+    },
+    "('matmul', 'Tesla T4')": {
+      "claude": 11.2774,
+      "deepseek": 11.3918,
+      "gpt": 11.425,
+      "grok": 11.4955,
+      "pytorch": 1.9831
+    },
+    "('reduction', 'NVIDIA A10G')": {
+      "claude": 0.0886,
+      "deepseek": 0.104,
+      "gpt": 0.0803,
+      "grok": 0.0782,
+      "pytorch": 0.0681
+    },
+    "('reduction', 'NVIDIA GeForce RTX 3050 6GB Laptop GPU')": {
+      "claude": 0.1569,
+      "deepseek": 0.3317,
+      "gpt": 0.1552,
+      "grok": 0.155,
+      "pytorch": 0.1546
+    },
+    "('reduction', 'NVIDIA L4')": {
+      "claude": 0.1259,
+      "deepseek": 0.1203,
+      "gpt": 0.1157,
+      "grok": 0.1166,
+      "pytorch": 0.1136
+    },
+    "('reduction', 'Tesla T4')": {
+      "claude": 0.1591,
+      "deepseek": 0.365,
+      "gpt": 0.1528,
+      "grok": 0.1668,
+      "pytorch": 0.1144
+    },
+    "('softmax', 'NVIDIA A10G')": {
+      "claude": 0.091,
+      "deepseek": 0.0802,
+      "gpt": 0.0893,
+      "grok": 0.0781,
+      "pytorch": 0.0494
+    },
+    "('softmax', 'NVIDIA GeForce RTX 3050 6GB Laptop GPU')": {
+      "claude": 0.2527,
+      "deepseek": 0.2183,
+      "gpt": 0.2484,
+      "grok": 0.2063,
+      "pytorch": 0.1199
+    },
+    "('softmax', 'NVIDIA L4')": {
+      "claude": 0.0466,
+      "deepseek": 0.0459,
+      "gpt": 0.0448,
+      "grok": 0.0447,
+      "pytorch": 0.0353
+    },
+    "('softmax', 'Tesla T4')": {
+      "claude": 0.2342,
+      "deepseek": 0.2377,
+      "gpt": 0.2325,
+      "grok": 0.2243,
+      "pytorch": 0.1105
+    }
+  },
+  "kaggle_variance": {
+    "n_matched": 74,
+    "pct_diff_mean": -4.115108647816774,
+    "pct_diff_std": 11.153744133755557,
+    "pct_diff_min": -38.781814531012685,
+    "pct_diff_max": 43.82577932409537
+  },
+  "kaggle_correctness_mismatches": 1
+}

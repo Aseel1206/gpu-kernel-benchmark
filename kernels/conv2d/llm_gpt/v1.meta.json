@@ -1,0 +1,11 @@
+{
+  "llm_name": "gpt",
+  "lab": "OpenAI",
+  "model_id": "GPT-6 (per generation comment; exact API snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "conv2d_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "One flat thread per output element, register accumulation over channels/kernel window."
+}

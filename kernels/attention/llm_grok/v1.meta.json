@@ -1,0 +1,11 @@
+{
+  "llm_name": "grok",
+  "lab": "xAI",
+  "model_id": "Grok (xAI) (per generation comment; exact snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "attention_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "Three-kernel (QK^T, softmax, PV) implementation that DOES materialize the full (B,H,S,S) attention matrix in global memory -- this is the simpler fallback style the prompt explicitly allows, not online-softmax/flash. Flag this clearly in the comparative analysis: it will use much more memory and likely be slower at large seq_len than the fused variants from Gemini/Claude/DeepSeek."
+}

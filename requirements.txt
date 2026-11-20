@@ -1,0 +1,12 @@
+torch>=2.1
+ninja          # required by torch.utils.cpp_extension.load_inline to build the generated CUDA kernels
+pandas
+pyarrow
+scikit-learn
+pynvml
+
+# kernel-generation script (scripts/generate_kernels.py) -- no GPU needed, runs anywhere with internet
+pyyaml
+anthropic
+openai
+google-genai

@@ -1,0 +1,11 @@
+{
+  "llm_name": "deepseek",
+  "lab": "DeepSeek",
+  "model_id": "DeepSeek (latest) (per generation comment; exact snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "reduction_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "Single-kernel per-block shared-memory reduction combined with atomicAdd across blocks (no separate final-reduce kernel)."
+}

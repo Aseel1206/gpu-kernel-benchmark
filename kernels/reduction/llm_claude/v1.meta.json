@@ -1,0 +1,11 @@
+{
+  "llm_name": "claude",
+  "lab": "Anthropic",
+  "model_id": "Claude Sonnet 5.5 (per generation comment)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "reduction_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "Two-stage shared-memory reduction, grid-stride loop then single-block final pass."
+}

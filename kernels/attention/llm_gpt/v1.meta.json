@@ -1,0 +1,11 @@
+{
+  "llm_name": "gpt",
+  "lab": "OpenAI",
+  "model_id": "GPT-6 (per generation comment; exact API snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "attention_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "One block per (batch, head, query); attention scores for that query row held in shared memory (size seq_len), never materializes the full (seq_len x seq_len) matrix in global memory, but is not a tiled/online-softmax flash-attention kernel -- simpler single-pass variant with full-row shared memory. Shared memory usage scales with seq_len, which the launcher does not explicitly cap via cudaFuncSetAttribute for opt-in shared memory, unlike the Claude/DeepSeek variants -- may fail at very large seq_len on some GPUs."
+}

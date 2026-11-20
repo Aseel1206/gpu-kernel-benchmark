@@ -1,0 +1,11 @@
+{
+  "llm_name": "gemini",
+  "lab": "Google",
+  "model_id": "Gemini (exact version unspecified by generation comment)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "attention_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "Fused tiled online-softmax (flash-attention-lite) kernel, templated on head_dim; never materializes the full (seq_len x seq_len) attention matrix in global memory. Matches the preferred style from the prompt."
+}

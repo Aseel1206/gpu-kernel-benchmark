@@ -1,0 +1,5 @@
+gpu_name,platform,sm_count,boost_clock_mhz,mem_bandwidth_gbps,fp32_tflops,fp16_tflops,l2_cache_mb,tdp_w,arch_gen
+Tesla T4,colab+kaggle,40,1590,320,8.1,65.1,4,70,Turing
+NVIDIA L4,l4,58,2040,300,30.3,121,48,72,Ada Lovelace
+NVIDIA A10G,modal_a10g,72,1695,600,31.2,125,6,300,Ampere
+NVIDIA GeForce RTX 3050 6GB Laptop GPU,rtx3050_laptop,20,1740,168,8.1,16.2,2,80,Ampere

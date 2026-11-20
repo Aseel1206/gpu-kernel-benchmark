@@ -1,0 +1,11 @@
+{
+  "llm_name": "claude",
+  "lab": "Anthropic",
+  "model_id": "Claude Sonnet 5.5 (per generation comment)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "attention_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "One block per (batch, head, query); full score row for that query kept in dynamic shared memory (size Sk), explicitly requests opt-in large shared memory via cudaFuncSetAttribute when Sk is large. Not a tiled/online-softmax flash kernel but never materializes the full (seq_len x seq_len) matrix in global memory."
+}

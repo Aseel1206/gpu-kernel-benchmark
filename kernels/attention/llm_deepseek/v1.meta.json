@@ -1,0 +1,11 @@
+{
+  "llm_name": "deepseek",
+  "lab": "DeepSeek",
+  "model_id": "DeepSeek (latest) (per generation comment; exact snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "attention_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "True online-softmax (running m, l, o) flash-attention-style kernel, one block per (batch, head, query), O(head_dim) memory per block -- never materializes any (seq_len x seq_len) structure, matching the prompt's preferred style most closely among the 5 LLMs. Caveat: requires head_dim <= blockDim (<=1024) since one thread maps to one head-dim element; no tiling across head_dim."
+}

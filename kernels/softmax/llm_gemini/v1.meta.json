@@ -1,0 +1,11 @@
+{
+  "llm_name": "gemini",
+  "lab": "Google",
+  "model_id": "Gemini (exact version unspecified by generation comment)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "softmax_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "One block per row, warp-shuffle + shared-memory reductions for max and sum."
+}

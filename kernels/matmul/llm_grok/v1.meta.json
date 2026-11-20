@@ -1,0 +1,11 @@
+{
+  "llm_name": "grok",
+  "lab": "xAI",
+  "model_id": "Grok (xAI) (per generation comment; exact snapshot unverified)",
+  "gen_temperature": "unspecified (web UI)",
+  "prompt_id": "matmul_v1",
+  "prompt_quality_score": null,
+  "timestamp": "2026-11-20",
+  "attempt": 1,
+  "notes": "16x16 shared-memory tiling, standard pattern."
+}

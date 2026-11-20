@@ -1,0 +1,50 @@
+# LLM lineup for the kernel-generation matrix (5 LLMs x 5 kernels = 25 generated implementations,
+# each benchmarked against the PyTorch baseline for that kernel).
+#
+# One flagship model per major lab, chosen for two reasons:
+#  - breadth: every major training approach is represented (closed frontier labs + one open-weight
+#    model), which gives the comparative-analysis section a genuine "LLM family" axis to slice by,
+#    not just 5 near-identical OpenAI/Anthropic models.
+#  - DeepSeek specifically has prior track record on GPU-kernel-generation benchmarks (KernelBench-
+#    style work), which fits this assignment's theme directly.
+#
+# IMPORTANT: exact API model-id strings move fast (new snapshots roughly monthly) and could not be
+# pinned down with confidence as of 2026-11-20 -- a web search for current IDs returned
+# conflicting/unverifiable names for OpenAI and Google in particular. Before running generation,
+# check each vendor's live model list and fill in `model_id` below:
+#   - OpenAI:    GET https://api.openai.com/v1/models  (or the models page in the dev docs)
+#   - Anthropic: https://docs.anthropic.com/en/docs/about-claude/models
+#   - Google:    https://ai.google.dev/gemini-api/docs/models
+#   - xAI:       https://docs.x.ai/docs/models
+#   - DeepSeek:  https://api-docs.deepseek.com/quick_start/pricing
+
+llms:
+  - name: claude
+    lab: Anthropic
+    model_id: "claude-opus-5-5"   # confirmed current flagship id as of 2026-11-20
+    notes: "Flagship Claude; consistently top-ranked for hard coding/debugging tasks."
+
+  - name: gpt
+    lab: OpenAI
+    model_id: ""   # current flagship GPT-5-series model -- verify via /v1/models
+    notes: "Flagship GPT; strong at fresh code generation."
+
+  - name: gemini
+    lab: Google
+    model_id: ""   # e.g. gemini-3-pro-preview or a newer 3.x snapshot -- verify via ai.google.dev
+    notes: "Flagship Gemini 3.x; large context window, strong reasoning+coding."
+
+  - name: grok
+    lab: xAI
+    model_id: ""   # current Grok 4.x flagship -- verify via docs.x.ai
+    notes: "Flagship Grok."
+
+  - name: deepseek
+    lab: DeepSeek
+    model_id: ""   # current DeepSeek V4-series model -- verify via api-docs.deepseek.com
+    notes: "Open-weight contrast to the four closed models; prior relevance to kernel-generation benchmarks."
+
+# Default sampling temperature for the main full-matrix run (held constant across LLMs so
+# "LLM" isn't confounded with "temperature"). If you later add the temperature-sweep variant
+# from the plan, override this per-generation and record it in each v*.meta.json.
+default_temperature: 0.7
